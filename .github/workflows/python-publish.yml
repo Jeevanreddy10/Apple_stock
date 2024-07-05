@@ -1,0 +1,35 @@
+name: Apple Stock Analysis Workflow
+
+on:
+  push:
+    branches:
+      - main  # Trigger workflow on push to main branch
+  pull_request:
+    branches:
+      - main  # Trigger workflow on pull requests to main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use Ubuntu as the operating system
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2  # Action to check out your repository
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Specify Python version
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Adjust as per your requirements file
+
+      - name: Run tests
+        run: |
+          pytest  # Command to run your tests
+
+      - name: Analyze Apple stock data
+        run: |
+          python src/my_package/analyze.py  # Replace with your analysis script path
