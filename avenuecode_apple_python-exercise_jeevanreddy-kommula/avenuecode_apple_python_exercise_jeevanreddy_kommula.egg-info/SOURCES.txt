@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+avenuecode_apple_python_exercise_jeevanreddy_kommula.egg-info/PKG-INFO
+avenuecode_apple_python_exercise_jeevanreddy_kommula.egg-info/SOURCES.txt
+avenuecode_apple_python_exercise_jeevanreddy_kommula.egg-info/dependency_links.txt
+avenuecode_apple_python_exercise_jeevanreddy_kommula.egg-info/top_level.txt
+tests/__init__.py
+tests/test_data_analysis.py
+tests/test_data_cleaning.py
+tests/test_visualization.py
